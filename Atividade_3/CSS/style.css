@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../Imagens/cinema.png");
+    background-repeat: repeat;
+    background-size: 500px;
+    padding: 20px;
+}
+
+/* ── Header ── */
+
+header {
+    background: linear-gradient(to right, rgb(0, 25, 255), rgba(56, 192, 255, 0.973));
+    border-radius: 20px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.Titulo {
+    color: white;
+    font-size: 50px;
+}
+
+/* ── Hambúrguer ── */
+
+.hamburger {
+    position: absolute;
+    left: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.hamburger:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* ── Overlay ── */
+
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 10;
+}
+
+.overlay.open {
+    display: block;
+}
+
+/* ── Sidebar ── */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 220px;
+    background: #1a1a2e;
+    z-index: 20;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    padding: 24px 0;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 12px;
+}
+
+.sidebar-header span {
+    color: white;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.fechar-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fechar-btn:hover {
+    color: white;
+}
+
+nav a {
+    display: block;
+    padding: 13px 20px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+/* ── Cards ── */
+
+.filme-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.card {
+    background-color: lightblue;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.card img {
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #0C447C;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #185FA5;
+}

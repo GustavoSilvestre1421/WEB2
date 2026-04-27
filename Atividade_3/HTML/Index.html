@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineReview</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+</head>
+
+<body>
+
+    <header>
+        <button class="hamburger" onclick="abrirMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <h1 class="Titulo">CineReview</h1>
+    </header>
+
+    <div class="overlay" id="overlay" onclick="fecharMenu()"></div>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <span>CineReview</span>
+            <button class="fechar-btn" onclick="fecharMenu()">✕</button>
+        </div>
+        <nav>
+            <a href="#">⌂ Início</a>
+            <a href="#">✉ Contato</a>
+            <a href="#">ℹ Sobre</a>
+        </nav>
+    </div>
+
+    <section>
+
+        <div class="filme-row">
+            <div class="card">
+                <img src="../Imagens/devoradores.webp" alt="Devoradores de Estrelas">
+            </div>
+            <div class="card">
+                <h2>Devoradores de Estrelas</h2>
+                <p>Devoradores de Estrelas (Project Hail Mary), baseado no livro de Andy Weir, segue Ryland Grace (Ryan Gosling), um professor de ciências que acorda em uma espaçonave sem memória e descobre ser o único sobrevivente de uma missão desesperada para salvar a Terra de uma ameaça solar. Sozinho, ele precisa usar a ciência e a ajuda de um aliado alienígena inesperado para reverter a destruição.</p>
+            </div>
+        </div>
+
+        <div class="filme-row">
+            <div class="card">
+                <img src="../Imagens/supermario.avif" alt="Super Mario Bros. O Filme 2">
+            </div>
+            <div class="card">
+                <h2>Super Mario Galaxy</h2>
+                <p>Super Mario Galaxy: O Filme (previsto para 2026) é uma aventura animada intergaláctica que continua a história de 2023. Mario e aliados viajam pelo espaço para salvar a Princesa Peach e o universo de uma nova ameaça, Bowser Jr., que busca resgatar Bowser com a ajuda de novos personagens como Rosalina.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function abrirMenu() {
+            document.getElementById('sidebar').classList.add('open');
+            document.getElementById('overlay').classList.add('open');
+        }
+        function fecharMenu() {
+            document.getElementById('sidebar').classList.remove('open');
+            document.getElementById('overlay').classList.remove('open');
+        }
+    </script>
+
+</body>
+</html>
